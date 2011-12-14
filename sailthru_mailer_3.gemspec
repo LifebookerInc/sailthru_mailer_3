@@ -29,7 +29,6 @@ Gem::Specification.new do |s|
     "lib/sailthru_mailer.rb",
     "lib/sailthru_mailer/base.rb",
     "lib/sailthru_mailer/connection.rb",
-    "sailthru_mailer.gemspec",
     "sailthru_mailer_3.gemspec",
     "spec/lib/sailthru_mailer/base_spec.rb",
     "spec/lib/sailthru_mailer_spec.rb",
