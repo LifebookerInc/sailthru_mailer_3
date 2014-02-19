@@ -6,15 +6,10 @@ source "http://rubygems.org"
 # Add dependencies to develop your gem here.
 # Include everything needed to run rake, tests, features, etc.
 
-gem "activesupport"
-gem "bundler"
-gem "i18n"
-gem "sailthru-client", 
-  :git => "https://github.com/sailthru/sailthru-ruby-client.git"
+gemspec
 
-group :development, :test do
-  gem "rspec"
-  gem "guard-rspec"
-  gem "simplecov"
-  gem "mocha"
-end
+gem "bundler"
+gem "guard-rspec"
+gem "simplecov"
+gem "mocha"
+gem "rake"

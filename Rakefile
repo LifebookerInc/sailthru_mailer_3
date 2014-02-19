@@ -2,6 +2,8 @@
 
 require 'rubygems'
 require 'bundler'
+require "bundler/gem_tasks"
+
 begin
   Bundler.setup(:default, :development)
 rescue Bundler::BundlerError => e
@@ -10,20 +12,6 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 require 'rake'
-
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "sailthru_mailer_3"
-  gem.homepage = "http://github.com/dlangevin/sailthru_mailer_3"
-  gem.license = "MIT"
-  gem.summary = %Q{Wrapper for Sailthru ruby gem}
-  gem.description = %Q{Implements ActionMailer compatible syntax}
-  gem.email = "dan.langevin@lifebooker.com"
-  gem.authors = ["Dan Langevin"]
-  # dependencies defined in Gemfile
-end
-Jeweler::RubygemsDotOrgTasks.new
 
 require 'rspec/core'
 require 'rspec/core/rake_task'
@@ -37,13 +25,3 @@ RSpec::Core::RakeTask.new(:rcov) do |spec|
 end
 
 task :default => :spec
-
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
-
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "sailthru_mailer_3 #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
-end

@@ -9,7 +9,7 @@ require 'sailthru_mailer'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
-Bundler.require(:default, :test)
+Bundler.require(:default)
 
 SimpleCov.start do
   add_filter "/spec/"
