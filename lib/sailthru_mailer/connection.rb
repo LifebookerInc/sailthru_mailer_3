@@ -7,8 +7,14 @@ module SailthruMailer
         SailthruMailer.settings[:api_url]
       )
     end
+    
+    # 
+    # Alias send_email as deliver
+    # @param  *args [Array<Mixed>] 
+    # 
+    # @return [Hash] Response
     def deliver(*args)
-      @client.send(*args)
+      @client.send_email(*args)
     end
     # proxy all methods to @client
     def method_missing(m, *args, &block)

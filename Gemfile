@@ -7,15 +7,14 @@ source "http://rubygems.org"
 # Include everything needed to run rake, tests, features, etc.
 
 gem "activesupport"
+gem "bundler"
 gem "i18n"
-gem "sailthru-client", :git => "https://github.com/sailthru/sailthru-ruby-client.git"
+gem "sailthru-client", 
+  :git => "https://github.com/sailthru/sailthru-ruby-client.git"
 
-group :development do
-  gem "ruby-debug19"
+group :development, :test do
   gem "rspec"
   gem "guard-rspec"
-  gem "bundler", "~> 1.0.0"
-  gem "jeweler", "~> 1.6.4"
   gem "simplecov"
   gem "mocha"
 end
